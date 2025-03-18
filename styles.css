@@ -1,0 +1,527 @@
+/* Reset CSS */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* General Styles */
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #d3c6f3;
+    color: #000;
+}
+
+/* Header */
+header {
+    background: #c2b5ff;
+    padding: 20px 20px;
+    
+}
+
+nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    position: relative;
+}
+
+/* Logo */
+.logo img {
+    height: 50px; /* Sesuaikan ukuran gambar */
+    width: auto; 
+    display: block;
+}
+
+/* Menu */
+.nav-links {
+    list-style: none;
+    display: flex;
+    gap: 20px;
+}
+
+.nav-links li {
+    display: inline;
+}
+
+.nav-links a {
+    text-decoration: none;
+    color: black;
+    font-weight: bold;
+}
+
+/* Menu Toggle (Mobile) */
+.menu-toggle {
+    display: none;
+    font-size: 24px;
+    cursor: pointer;
+    background: none;
+    border: none;
+    outline: none;
+    padding: 10px;
+}
+
+/* Responsif: Mobile Mode */
+@media (max-width: 768px) {
+    nav {
+        padding: 10px 15px;
+    }
+
+    .menu-toggle {
+        display: block;
+        position: absolute;
+        right: 15px;
+        top: 50%;
+        transform: translateY(-50%);
+    }
+
+    .nav-links {
+        display: none;
+        flex-direction: column;
+        align-items: center;
+        position: absolute;
+        top: 100%;
+        left: 0;
+        width: 100%;
+        background: #c2b5ff;
+        padding: 10px 0;
+        box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+    }
+
+    .nav-links.active {
+        display: flex;
+    }
+}
+/* Hero Section */
+#hero {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 50px;
+    gap: 30px;
+}
+
+.hero-content {
+    max-width: 500px;
+}
+
+.hero-content h1 {
+    font-size: 36px;
+    font-weight: bold;
+    color: #1d1d1d;
+}
+
+.hero-content p {
+    font-size: 18px;
+    color: #555;
+    margin-bottom: 20px;
+}
+
+.cta-button {
+    display: inline-block;
+    background: black;
+    color: white;
+    padding: 12px 20px;
+    text-decoration: none;
+    font-size: 16px;
+    border-radius: 5px;
+}
+
+.cta-button:hover {
+    background: #333;
+}
+
+/* Hero Image */
+.hero-image img {
+    width: 100%;
+    max-width: 600px;
+    border-radius: 10px;
+}
+
+/* Responsif */
+@media (max-width: 768px) {
+    #hero {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .hero-image img {
+        max-width: 100%;
+    }
+}
+
+/* About Section */
+/* Styling untuk section About */
+#about {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    padding: 20px;
+    background-color: #c2b5ff; /* Sesuaikan warna latar */
+}
+
+.about-container {
+    display: flex;
+    align-items: center;
+    max-width: 900px;
+    width: 100%;
+}
+
+/* Styling untuk gambar */
+.about-image img {
+    width: 280px;
+    border-radius: 10px;
+}
+
+/* Tambahkan jarak antara gambar dan teks */
+.about-text {
+    flex: 1;
+    margin-left: 50px; /* Tambahkan jarak */
+}
+
+/* Styling teks */
+.about-text h2 {
+    font-size: 28px;
+    margin-bottom: 10px;
+}
+
+.about-text p {
+    font-size: 16px;
+    line-height: 1.6;
+}
+
+/* Styling tombol */
+.buttons {
+    margin-top: 15px;
+}
+
+.btn-primary,
+.btn-outline {
+    display: inline-block;
+    padding: 10px 15px;
+    text-decoration: none;
+    font-size: 14px;
+    border-radius: 5px;
+}
+
+.btn-primary {
+    background-color: black;
+    color: white;
+}
+
+.btn-outline {
+    border: 2px solid black;
+    color: black;
+    background-color: transparent;
+    margin-left: 10px;
+}
+
+/* Responsif untuk layar kecil */
+@media (max-width: 768px) {
+    .about-container {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .about-image img {
+        width: 200px;
+    }
+
+    .about-text {
+        margin-left: 0;
+        margin-top: 20px;
+    }
+
+    .buttons {
+        display: flex;
+        flex-direction: column;
+        gap: 10px;
+    }
+
+    .btn-outline {
+        margin-left: 0;
+    }
+}
+
+
+/* Skills Section */
+#skills {
+    text-align: center;
+    padding: 40px 20px;
+    background-color: #d3c6f3;
+}
+
+.skills-container {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    flex-wrap: wrap;
+    margin-top: 20px;
+}
+
+.skill {
+    background: #c2b5ff;
+    padding: 20px;
+    border-radius: 10px;
+    width: 250px;
+    text-align: left;
+}
+
+.skill p {
+    font-weight: bold;
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 10px;
+}
+
+.progress-bar {
+    width: 100%;
+    height: 10px;
+    background: #e0e0e0;
+    border-radius: 5px;
+    overflow: hidden;
+}
+
+.progress {
+    height: 100%;
+    background: black;
+}
+
+/* Styling untuk Testimoni */
+#testimonials {
+    text-align: center;
+    background-color: #d3c6f3; /* Warna latar belakang */
+    padding: 50px 20px;
+}
+
+#testimonials h2 {
+    font-size: 28px;
+    font-weight: bold;
+    margin-bottom: 20px;
+}
+
+.testimonials-container {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    flex-wrap: wrap;
+}
+
+.testimonial-card {
+    background-color: #c2b5ff;
+    padding: 20px;
+    border-radius: 10px;
+    width: 300px;
+    text-align: left;
+    color: rgb(0, 0, 0);
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+.testimonial-card img {
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    object-fit: cover;
+    margin-bottom: 10px;
+}
+
+.testimonial-text h3 {
+    font-size: 18px;
+    font-weight: bold;
+    margin: 0;
+}
+
+.job-title {
+    font-size: 14px;
+    font-weight: normal;
+    opacity: 0.8;
+    margin-bottom: 10px;
+}
+
+.quote {
+    font-size: 14px;
+    line-height: 1.6;
+}
+
+/* Responsif */
+@media (max-width: 768px) {
+    .testimonials-container {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .testimonial-card {
+        width: 90%;
+    }
+}
+
+
+
+/* Portfolio Section */
+/* Styling untuk Portofolio */
+#portfolio {
+    text-align: center;
+    background-color: #c2b5ff; /* Warna latar belakang */
+    padding: 50px 20px;
+}
+
+#portfolio h2 {
+    font-size: 28px;
+    font-weight: bold;
+    margin-bottom: 20px;
+}
+
+.portfolio-container {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    flex-wrap: wrap;
+}
+
+.portfolio-item {
+    width: 300px;
+    border-radius: 10px;
+    overflow: hidden;
+    transition: transform 0.3s ease-in-out;
+}
+
+.portfolio-item img {
+    width: 100%;
+    height: auto;
+    border-radius: 10px;
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+.portfolio-item:hover {
+    transform: scale(1.05);
+}
+
+
+/* Styling untuk Form Kontak */
+#contact {
+    text-align: center;
+    background-color: #d3c6f3; /* Warna latar belakang */
+    padding: 50px 20px;
+}
+
+#contact h2 {
+    font-size: 28px;
+    font-weight: bold;
+    margin-bottom: 20px;
+}
+
+form {
+    max-width: 500px;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+label {
+    text-align: left;
+    font-weight: bold;
+}
+
+input, textarea {
+    width: 100%;
+    padding: 12px;
+    border: none;
+    border-radius: 8px;
+    font-size: 16px;
+    background-color: #fff;
+    box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+textarea {
+    height: 120px;
+    resize: none;
+}
+
+button {
+    background-color: black;
+    color: white;
+    padding: 12px;
+    border: none;
+    border-radius: 8px;
+    font-size: 16px;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+button:hover {
+    background-color: #444;
+}
+
+
+/* Footer */
+footer {
+    background-color: #0d0f1a; /* Warna background */
+    color: #ffffff; /* Warna teks */
+    padding: 40px 20px;
+    text-align: center;
+}
+
+.footer-content {
+    display: flex;
+    justify-content: space-between;
+    align-items: start;
+    max-width: 1000px;
+    margin: 0 auto;
+    flex-wrap: wrap;
+}
+
+.footer-content .description {
+    max-width: 300px;
+    text-align: left;
+}
+
+.footer-section {
+    text-align: left;
+    margin: 10px;
+}
+
+.footer-section h3 {
+    font-size: 18px;
+    margin-bottom: 10px;
+}
+
+.footer-section ul {
+    list-style: none;
+    padding: 0;
+}
+
+.footer-section ul li {
+    margin-bottom: 5px;
+}
+
+.footer-section ul li a {
+    color: #ffffff;
+    text-decoration: none;
+    transition: 0.3s;
+}
+
+.footer-section ul li a:hover {
+    color: #4e8cff;
+}
+
+.social-icons a {
+    color: #ffffff;
+    font-size: 20px;
+    margin: 0 10px;
+    transition: 0.3s;
+}
+
+.social-icons a:hover {
+    color: #4e8cff;
+}
+
+.copyright {
+    margin-top: 30px;
+    font-size: 14px;
+    opacity: 0.7;
+}
+
